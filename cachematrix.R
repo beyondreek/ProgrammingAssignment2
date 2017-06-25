@@ -6,7 +6,7 @@
 ####
 ####
 ####
-###You would use type in console as follows:-
+###You would type in console as follows:-
 ####
 ####Say you create a square matrix-
 ####
@@ -21,7 +21,7 @@
 ####      doka<-cacheSolve(leca)
 ####
 ####
-####To verify if the inverse in "doka" is correct, type in "print(mat%*%doka)
+####To verify if the inverse in "doka" is correct, type in "print(leca$get()%*%doka)
 #####
 #####
 #####In summary, type in the following in console to check the functions:
@@ -31,6 +31,10 @@
 ####      leca <- makeCacheMatrix(mat)
 ####      doka <- cacheSolve(leca)
 ####      print(leca$get()%*%doka)
+
+
+
+
 
 ## The following makeCacheMAtrix()- caches the matrix , its inverse and
 ############################returns a list containing functions to:
@@ -63,7 +67,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## This function takes a square , invertible matrix. If there is an inverse in cache already , 
+## This function takes the output of makeCacheMAtrix(). If there is an inverse in cache already , 
 ##it returns the cached value. Else, it calculates the matrix inverse, caches the result
 ## and returns the inverse.
 
